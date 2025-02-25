@@ -6,9 +6,20 @@ body {
     height: 100vh;
 }
 
+.layer {
+    display: grid;
+    position: absolute;
+    left: 630px;
+    z-index: 100;
+    width: 200px;
+    height: 100px;
+    background-color: rgba(0, 34, 0, 0.307);
+    border: 1px solid black;
+
 h1 {
     color: rgb(255, 146, 199);
     position: relative;
+    left: 40px;
     font-size: 2.1rem;
     width: 100%;
     animation-name: text;
@@ -20,7 +31,6 @@ h1 {
 
 .text {
     width: 100%;
-    padding-right: 2em;
     overflow: hidden;
 }
 
@@ -29,7 +39,9 @@ h1 {
 .circle {
     width: 55px;
     height: 55px;
+    z-index: 100;
     position: relative;
+    right: 40px;
     background-color: rgb(255, 146, 199);
     border-radius: 30px;
     animation-name: dot;
