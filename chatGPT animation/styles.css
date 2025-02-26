@@ -7,19 +7,21 @@ body {
 }
 
 .layer {
-    display: grid;
     position: absolute;
-    left: 630px;
+    transform: translateX(180px);
     z-index: 100;
     width: 200px;
     height: 100px;
     background-color: rgba(0, 34, 0, 0.307);
-    border: 1px solid black;
+    animation-name: backlayer;
+    animation-duration: 952ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: normal;
 
 h1 {
     color: rgb(255, 146, 199);
     position: relative;
-    left: 40px;
     font-size: 2.1rem;
     width: 100%;
     animation-name: text;
@@ -30,6 +32,7 @@ h1 {
 }
 
 .text {
+    display: grid;
     width: 100%;
     overflow: hidden;
 }
@@ -41,7 +44,7 @@ h1 {
     height: 55px;
     z-index: 100;
     position: relative;
-    right: 40px;
+    transform: translate(10px);
     background-color: rgb(255, 146, 199);
     border-radius: 30px;
     animation-name: dot;
@@ -62,7 +65,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 205px;
+    width: 25%;
     height: 20%;
 }
 
@@ -71,10 +74,11 @@ section {
 @keyframes text {
     
     0% {
-        left: 100px;
+        left: 0;
         
     }
-    
+    50% {
+        left: 150px;
     
     100% {
         
@@ -85,12 +89,27 @@ section {
 @keyframes dot {
 
     0% {
-        right: 50px;
+        right: 0;
         
     }
-
+    50% {
+        right:100px;
+    }
     
     100% {
         right: 0;
     }
+}
+
+@keyframes backlayer {
+    0% {
+        transform: translateX(0);
+    }
+
+   50% {
+    transform: translateX(100px);
+   }
+   100% {
+    transform: translateX(0);
+   }
 }
