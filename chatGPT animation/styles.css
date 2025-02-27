@@ -6,19 +6,6 @@ body {
     height: 100vh;
 }
 
-.layer {
-    position: absolute;
-    transform: translateX(180px);
-    z-index: 100;
-    width: 200px;
-    height: 100px;
-    background-color: rgba(0, 34, 0, 0.307);
-    animation-name: backlayer;
-    animation-duration: 952ms;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-
 h1 {
     color: rgb(255, 146, 199);
     position: relative;
@@ -28,7 +15,7 @@ h1 {
     animation-duration: 955ms;
     animation-timing-function: cubic-bezier(0.42, 0, 0.33, 1.16);
     animation-iteration-count: 10;
-    animation-direction: alternate-reverse;
+    animation-direction: normal;
 }
 
 .text {
@@ -42,16 +29,23 @@ h1 {
 .circle {
     width: 55px;
     height: 55px;
-    z-index: 100;
-    position: relative;
-    transform: translate(10px);
     background-color: rgb(255, 146, 199);
     border-radius: 30px;
+}
+
+.circle-container {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transform: translate(10px);
+    background-color: rgb(0, 34, 0);
     animation-name: dot;
     animation-duration: 952ms;
     animation-timing-function: cubic-bezier(0.42, 0, 0.33, 1.16);
     animation-iteration-count: 10;
-    animation-direction: alternate-reverse;
+    animation-direction: normal;
 }
 
 section {
@@ -67,6 +61,8 @@ section {
     justify-content: center;
     width: 25%;
     height: 20%;
+    position: relative;
+    left: 70px;
 }
 
 
@@ -101,15 +97,4 @@ section {
     }
 }
 
-@keyframes backlayer {
-    0% {
-        transform: translateX(0);
-    }
 
-   50% {
-    transform: translateX(100px);
-   }
-   100% {
-    transform: translateX(0);
-   }
-}
